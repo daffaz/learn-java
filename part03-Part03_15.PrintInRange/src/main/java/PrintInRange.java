@@ -7,4 +7,11 @@ public class PrintInRange {
         // Try your method here
     }
     
+    public static void printNumbersInRange(ArrayList<Integer> list, int start, int end) {
+        for (int num : list) {
+            if (num >= start && num <= end) {
+                System.out.println(num);
+            }
+        }
+    }
 }

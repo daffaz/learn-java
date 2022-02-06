@@ -16,6 +16,6 @@ public class ListSize {
 
             list.add(input);
         }
-
+        System.out.println("Number of values on the list: " + list.size());
     }
 }
