@@ -1,4 +1,7 @@
 
+import java.util.Arrays;
+
+
 public class Program {
 
     public static void main(String[] args) {
@@ -6,6 +9,7 @@ public class Program {
         // with your Fitbyte class
 
 //        Fitbyte fitbyte = new Fitbyte(30, 60);
+        System.out.println(Arrays.toString(Fitbyte.class.getDeclaredMethods()));
 //
 //        double percentage = 0.5;
 //
