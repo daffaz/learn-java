@@ -26,12 +26,23 @@ public class SimpleCollection {
         }
         
         String toReturn = "";
-//        String toReturn = "The collection alphabet has " + this.elements.size() + " element:\n";
         for (String ele : this.elements) {
-            toReturn += ele + "\n"; 
+            if (this.elements.indexOf(ele) == this.elements.size() - 1) {
+                toReturn = toReturn + ele;
+            }else {
+                toReturn = toReturn + ele + "\n"; 
+            }
         }
-        toReturn = "The collection " + this.name + " has " + this.elements.size() + " element:\n" +
-                toReturn + "\n";
+        
+        String ele = "";
+        
+        if (this.elements.size() > 1) {
+            ele = "elements:\n";
+        }else {
+            ele = "element:\n";
+        }
+        
+        toReturn = "The collection " + this.name + " has " + this.elements.size() + " " + ele + toReturn;
         
         return toReturn;
     }
