@@ -7,13 +7,13 @@ public class FirstWords {
         Scanner scanner = new Scanner(System.in);
         
         while (true) {
-            String input = scanner.nextLine();
-            if (input.equals("")) {
+            String words = scanner.nextLine();
+            if (words.isEmpty()) {
                 break;
             }
             
-            String[] splittedInput = input.split(" ");
-            System.out.println(splittedInput[0]);
+            String[] arrayOfWords = words.split(" ");
+            System.out.println(arrayOfWords[0]);
         }
     }
 }

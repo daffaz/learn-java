@@ -2,7 +2,6 @@
 public class Main {
     public static void main(String[] args) {
           Menu exactum = new Menu();
-        
         // When you have completed the method addMeal(String meal)
         // You can delete the comments below
         
