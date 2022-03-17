@@ -1,4 +1,8 @@
 
+import java.util.Objects;
+
+
+
 public class SimpleDate {
 
     private int day;
@@ -14,6 +18,11 @@ public class SimpleDate {
     @Override
     public String toString() {
         return this.day + "." + this.month + "." + this.year;
+    }
+    
+    @Override
+    public int hashCode() {
+        return Objects.hash(day, month, year);
     }
 
     public boolean earlier(SimpleDate other) {

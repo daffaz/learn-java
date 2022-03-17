@@ -2,6 +2,7 @@
 import java.util.Objects;
 
 public class LicensePlate {
+   
     // don't modify existing parts of this class
 
     // these instance variables have been defined as final, meaning 
@@ -17,6 +18,31 @@ public class LicensePlate {
     @Override
     public String toString() {
         return country + " " + liNumber;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        LicensePlate objCompared = (LicensePlate) obj;
+        
+        if (this.toString().equals(objCompared.toString())) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public int hashCode() {
+        return this.liNumber.hashCode() + this.country.hashCode();
     }
 
 }

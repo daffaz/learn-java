@@ -34,6 +34,26 @@ public class SimpleDate {
 
         return false;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        
+        if (obj.getClass() != this.getClass()) {
+            return false;
+        }
+        
+        SimpleDate objCompared = (SimpleDate) obj;
+        
+        if (this.toString().equals(obj.toString())) {
+            return true;
+        }
+        
+        return false;
+    }
+    
 
     public int differenceInYears(SimpleDate other) {
         if (earlier(other)) {
